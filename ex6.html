@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Events</title>
+
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Interactive Events</h2>
+    <button id="btn">Click Me</button>
+    <div id="box">Hover Me</div>
+    <p id="text"></p>
+
+    <script>
+        document.getElementById("btn").onclick = function() {
+            document.getElementById("text").innerHTML = "Button Clicked!";
+        };
+        let box = document.getElementById("box");
+
+        box.onmouseover = function() {
+            box.style.backgroundColor = "orange";
+            
+        };
+
+        box.onmouseout = function() {
+            box.style.backgroundColor = "lightblue";
+            box.innerHTML = "Hover Me";
+        };
+    </script>
+
+</body>
+</html>
